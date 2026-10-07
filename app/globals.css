@@ -1,0 +1,90 @@
+@import 'tailwindcss';
+@import 'tw-animate-css';
+@import 'shadcn/tailwind.css';
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: var(--font-nunito), ui-sans-serif, system-ui, sans-serif;
+  --font-display: var(--font-fredoka), ui-rounded, system-ui, sans-serif;
+
+  --color-cream: var(--cream);
+  --color-chocolate: var(--chocolate);
+  --color-pink: var(--pink);
+  --color-caramel: var(--caramel);
+  --color-vanilla: var(--vanilla);
+  --color-strawberry: var(--strawberry);
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+  --color-foreground: var(--foreground);
+  --color-background: var(--background);
+  --radius-sm: calc(var(--radius) * 0.6);
+  --radius-md: calc(var(--radius) * 0.8);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) * 1.4);
+  --radius-2xl: calc(var(--radius) * 1.8);
+  --radius-3xl: calc(var(--radius) * 2.2);
+  --radius-4xl: calc(var(--radius) * 2.6);
+}
+
+:root {
+  color-scheme: light;
+  --cream: #fff8ef;
+  --chocolate: #5a3025;
+  --pink: #f8d9dc;
+  --caramel: #d99a55;
+  --vanilla: #f7d98b;
+  --strawberry: #e89aa5;
+
+  --background: var(--cream);
+  --foreground: var(--chocolate);
+  --card: #ffffff;
+  --card-foreground: var(--chocolate);
+  --popover: #ffffff;
+  --popover-foreground: var(--chocolate);
+  --primary: var(--chocolate);
+  --primary-foreground: var(--cream);
+  --secondary: var(--pink);
+  --secondary-foreground: var(--chocolate);
+  --muted: #f6eadb;
+  --muted-foreground: #7d5a4c;
+  --accent: var(--vanilla);
+  --accent-foreground: var(--chocolate);
+  --destructive: #c2410c;
+  --border: #ecdcc8;
+  --input: #ecdcc8;
+  --ring: var(--caramel);
+  --radius: 1rem;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-background text-foreground font-sans;
+  }
+  h1,
+  h2,
+  h3 {
+    @apply font-display;
+  }
+}
